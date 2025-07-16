@@ -133,12 +133,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CatCharacter.cpp" />
     <ClCompile Include="raytmx-example.cpp" />
+    <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\raytmx.h" />
+    <ClInclude Include="CatCharacter.h" />
+    <ClInclude Include="TileMap.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="assets\Asparagus.png" />
+    <Image Include="assets\carpet man.png" />
+    <Image Include="assets\carSurvivor.png" />
+    <Image Include="assets\carSurvivorUp.png" />
+    <Image Include="assets\CatSurvivor.png" />
+    <Image Include="assets\coolTileset.png" />
+    <Image Include="assets\darkness.png" />
+    <Image Include="assets\Decay.png" />
+    <Image Include="assets\map idea.png" />
+    <Image Include="assets\scary monster guy.png" />
+    <Image Include="assets\testmap.png" />
+    <Image Include="assets\WhiteCar.png" />
+    <Image Include="assets\WhiteCarBack.png" />
+    <Image Include="assets\WhiteCarIdle.png" />
     <Image Include="tilesets\fade.png" />
     <Image Include="tilesets\grass.png" />
     <Image Include="tilesets\ruins.png" />
@@ -146,8 +164,15 @@
     <Image Include="tilesets\trees.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\car.piskel" />
+    <None Include="assets\CatSurvivor.piskel" />
+    <None Include="assets\door.tx" />
+    <None Include="assets\forgotten tileset.tsx" />
+    <None Include="assets\raytmx-example.tiled-project" />
+    <None Include="assets\raytmx-example.tmx" />
+    <None Include="assets\testmap..tmx" />
+    <None Include="assets\thehalls.tmx" />
     <None Include="maps\door.tx" />
-    <None Include="maps\raytmx-example.tmx" />
     <None Include="packages.config" />
     <None Include="tilesets\shadows.tsx" />
     <None Include="tilesets\trees.tsx" />

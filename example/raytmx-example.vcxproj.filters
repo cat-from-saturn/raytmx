@@ -18,9 +18,21 @@
     <ClCompile Include="raytmx-example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\raytmx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CatCharacter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -40,6 +52,48 @@
     <Image Include="tilesets\trees.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\Asparagus.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\carpet man.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\carSurvivor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\carSurvivorUp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\CatSurvivor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\coolTileset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\darkness.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\Decay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\map idea.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\scary monster guy.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\testmap.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\WhiteCar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\WhiteCarBack.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\WhiteCarIdle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="tilesets\shadows.tsx">
@@ -51,9 +105,14 @@
     <None Include="maps\door.tx">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="maps\raytmx-example.tmx">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="packages.config" />
+    <None Include="assets\car.piskel" />
+    <None Include="assets\CatSurvivor.piskel" />
+    <None Include="assets\forgotten tileset.tsx" />
+    <None Include="assets\testmap..tmx" />
+    <None Include="assets\thehalls.tmx" />
+    <None Include="assets\raytmx-example.tiled-project" />
+    <None Include="assets\raytmx-example.tmx" />
+    <None Include="assets\door.tx" />
   </ItemGroup>
 </Project>
