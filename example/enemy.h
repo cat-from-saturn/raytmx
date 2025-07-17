@@ -1,5 +1,6 @@
 #pragma once
 #include "raylib.h"
+#include "raytmx.h"
 
 class enemy
 {
@@ -9,10 +10,15 @@ private:
 
 public:
 
-	void enemyInit(Vector2 playerPos, float dT);
+	void enemyInit(Vector2 playerPos);
 
 	void EnemyMovement(Vector2& playerPos);
 
+	void collisionDetect();
+
+	void tryMove(float& coord, float delta, const TmxMap* map);
+
+	Rectangle rebuildCollisionsRec();
 
 	enemy()
 	{
@@ -33,6 +39,5 @@ typedef struct monster
 	bool active;
 	Color color;
 	Texture2D texture;
-	int speed;
 	Vector2 position;
 } Enemy;

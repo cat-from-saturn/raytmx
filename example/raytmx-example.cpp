@@ -18,7 +18,7 @@ int main()
 	CatCharacter survivor{}; 
 	TileMap halls{};
 	enemy hostile{};
-
+	hostile.enemyInit(survivor.charPosition);
 	Vector2 origin{ winWidth/2,winHeight/2 };
 	Vector2 camTarget{ 0, 0 };
 
@@ -29,14 +29,14 @@ int main()
 	Camera.zoom = 1.5f;
 
 	const TmxMap* map = halls.TMXmap;
-  
+    
 	SetTargetFPS(60);
 	while (!WindowShouldClose())
 	{
 		BeginDrawing();
 		BeginMode2D(Camera);
 		ClearBackground(BLACK);
-        hostile.enemyInit(survivor.charPosition, GetFrameTime());
+
 		halls.DrawMap(&Camera, winWidth, winHeight);
 		survivor.PerTick(GetFrameTime(), winWidth, winHeight, map);
 		DrawRectangleRec(survivor.RebuildCollisionRec(), RED);
@@ -49,6 +49,7 @@ int main()
 	}
 	EndMode2D();
 	UnloadTexture(survivor.playerCat);
+	UnloadTMX(halls.TMXmap);
 	CloseWindow();
 
 }
