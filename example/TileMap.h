@@ -7,17 +7,16 @@ class TileMap
 {
 
 private:
-	const char* tmx =  "assets/thehalls.tmx" ;
-	TmxMap* unreality;
-	TmxMap* TMXmap = LoadTMX(tmx);
+	const char* tmx =  "assets/thehalls.tmx";
 
 
 public:
 
 	void DrawMap(Camera2D* camera, int winWidth, int winHeight);
 
+	bool CollisionCheck();
 
-
+	TmxMap* TMXmap = LoadTMX(tmx);
 
 	TileMap() {
 

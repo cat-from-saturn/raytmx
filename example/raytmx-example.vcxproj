@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Staff\Documents\raytmx;C:\Users\Staff\Documents\raytmx\external;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Student\Desktop\raytmx;C:\Users\Student\Desktop\raytmx\external;$(IncludePath)</IncludePath>
     <CopyLocalDeploymentContent>true</CopyLocalDeploymentContent>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -134,12 +134,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CatCharacter.cpp" />
+    <ClCompile Include="enemy.cpp" />
     <ClCompile Include="raytmx-example.cpp" />
     <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\raytmx.h" />
     <ClInclude Include="CatCharacter.h" />
+    <ClInclude Include="enemy.h" />
     <ClInclude Include="TileMap.h" />
   </ItemGroup>
   <ItemGroup>

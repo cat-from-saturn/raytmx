@@ -5,6 +5,7 @@
 #include "raymath.h"
 #include "CatCharacter.h"
 #include "TileMap.h"
+#include "enemy.h"
 
 
 
@@ -14,29 +15,35 @@ int main()
 	int winHeight = 1200;
 	InitWindow(winWidth, winHeight, "forgotten halls");
 
-	Vector2 origin{ winWidth / 2, winHeight / 2 };
+	CatCharacter survivor{}; 
+	TileMap halls{};
+	enemy hostile{};
+
+	Vector2 origin{ winWidth/2,winHeight/2 };
 	Vector2 camTarget{ 0, 0 };
 
 	Camera2D Camera{};
 	Camera.offset = origin;
 	Camera.target = camTarget;
 	Camera.rotation = 0.0f;
-	Camera.zoom = 1.0f;
+	Camera.zoom = 1.5f;
 
-	CatCharacter survivor{};
-	TileMap halls{};
-
+	const TmxMap* map = halls.TMXmap;
+  
 	SetTargetFPS(60);
 	while (!WindowShouldClose())
 	{
 		BeginDrawing();
 		BeginMode2D(Camera);
 		ClearBackground(BLACK);
-
+        hostile.enemyInit(survivor.charPosition, GetFrameTime());
 		halls.DrawMap(&Camera, winWidth, winHeight);
-		survivor.PerTick(GetFrameTime(), winWidth, winHeight);
+		survivor.PerTick(GetFrameTime(), winWidth, winHeight, map);
+		DrawRectangleRec(survivor.RebuildCollisionRec(), RED);
+		Camera.target = { survivor.charPosition.x + survivor.playerCat.width/2, survivor.charPosition.y + survivor.playerCat.height/2};
 
-		Camera.target = { survivor.charPosition.x, survivor.charPosition.y };
+		
+		hostile.EnemyMovement(survivor.charPosition);
 
 		EndDrawing();
 	}
