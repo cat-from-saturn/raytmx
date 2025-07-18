@@ -51,7 +51,7 @@ Rectangle CatCharacter::RebuildCollisionRec()
 {
 	return
 	{
-		 charPosition.x-playerCat.width*0.57f, charPosition.y - playerCat.height*0.7f, (float)playerCat.width*0.5f, (float)playerCat.height*0.8f
+		// charPosition.x-playerCat.width*0.57f, charPosition.y - playerCat.height*0.7f, (float)playerCat.width*0.5f, (float)playerCat.height*0.8f
 	};
 }
 
